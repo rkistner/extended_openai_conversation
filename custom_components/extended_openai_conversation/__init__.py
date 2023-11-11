@@ -322,6 +322,7 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
             self.hass, function["function"], arguments, user_input, exposed_entities
         )
 
+        messages.append(message)
         messages.append(
             {
                 "role": "function",
